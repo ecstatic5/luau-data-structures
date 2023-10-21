@@ -104,7 +104,33 @@ return function()
 		end)
 
 		it("Should return an empty array if the 'fn' parameter doesn't return a value", function()
-			--
+			expect(#arrays.numbers:map(function() end).current).to.equal(0)
+		end)
+	end)
+
+	describe(":every<T>()", function()
+		it("Should ALWAYS return a boolean", function()
+			expect(Array.new(1, 2, 3, 4):every(function(el)
+				return type(el) == "number"
+			end)).to.be.a("boolean")
+		end)
+
+		it("Should throw an error if the 'fn' argument doesn't return a boolean", function()
+			expect(function()
+				arrays.numbers:every(function()
+					return "other value"
+				end)
+			end).to.throw("'fn' paremeter return value should be a boolean")
+		end)
+	end)
+
+	describe(":some<T>()", function()
+		it("Should throw an error if the 'fn' argument doesn't return a boolean", function()
+			expect(function()
+				arrays.numbers:some(function()
+					return "other value"
+				end)
+			end).to.throw("'fn' paremeter return value should be a boolean")
 		end)
 	end)
 
@@ -122,14 +148,6 @@ return function()
 			expect(numbers:fill(10, 1):every(function(el)
 				return el == numbers[1]
 			end)).to.be.equal(true)
-		end)
-	end)
-
-	describe(":every<T>()", function()
-		it("Should ALWAYS return a boolean", function()
-			expect(Array.new(1, 2, 3, 4):every(function(el)
-				return type(el) == "number"
-			end)).to.be.a("boolean")
 		end)
 	end)
 end
