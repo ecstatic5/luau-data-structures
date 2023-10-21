@@ -1,0 +1,21 @@
+site_name: DataStructures
+nav:
+  - Home: index.md
+  - About: about.md
+  - Installation: installation.md
+  - Docs: docs.md
+  - API: api.md
+  - Changelog: changelog.md
+theme:
+  name: readthedocs
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
