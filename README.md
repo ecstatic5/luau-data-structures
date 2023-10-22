@@ -4,6 +4,8 @@
 
 RDS is a ModuleScript that adds new data structures to LUAU with powerful and efficient methods to drive your game to success
 
+This ModuleScript was made for the Roblox Studio community, not to benefit from this, we only help the community to support it and make it grow, we are not professionals in this but we want to put our grain of sand since roblox does not help us with this kind of things
+
 ## Code Examples
 
 > Filter only even numbers
