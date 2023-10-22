@@ -3,7 +3,7 @@ nav:
   - Home: index.md
   - About: about.md
   - Installation: installation.md
-  - Docs: docs.md
+  - Tutorial: tutorial.md
   - API: api.md
   - Changelog: changelog.md
 theme:
