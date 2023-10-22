@@ -98,6 +98,12 @@ You can visit the full RDS API [clicking here](./api.md). The API contains ALL t
         - `:at(pos: number): any`
         - `:forEach<T>(fn: (el: T, index: number?, array: Array?) -> ())`
         - `:push(element): number`
+        - `:count(value: any): number`
+        - `:choice(): any`
+        - `:copy(): Array`
+        - `:first(): any`
+        - `:last(): any`
+        - `:remove(toRemove: number | string): any`
         - `:pop(): number`
         - `:shift(): any`
         - `unshift<T>(...: T): number`
