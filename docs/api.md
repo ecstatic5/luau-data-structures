@@ -119,23 +119,6 @@ print(Array.isEmpty(4)) -- ERROR: 'array' must be an Array
 ```
 
 ---
-<!-- :config -->
-> ### :config(configuration: Types.ArrayConfig) - **`instance (:)`**
-
-Creates a new instance of the Array class
-
-#### Parameters
-
-- `...: T`: Elements of any data type or type T to be added to the array
-
-#### Code example
-
-```lua linenums="1" hl_lines="2"
-local Array = require("<module-location>")
-local numbers = Array.new(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-```
-
----
 
 ## MORE COMING SOON 🦕
 
