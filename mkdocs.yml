@@ -1,10 +1,18 @@
 site_name: RDS
+site_url: https://ecstatic5.github.io/luau-data-structures/
+repo_url: https://github.com/ecstatic5/luau-data-structures
+repo_name: luau-data-structures
+
 nav:
   - Home: index.md
   - About: about.md
-  - Installation: installation.md
-  - Tutorial: tutorial.md
-  - API: api.md
+  - Tutorial:
+    - Installation: tutorial/installation.md
+    - Creating a data structure: tutorial/creating-data-structure.md
+  - API:
+    - Data Structures: api/data-structures.md
+    - Array: api/arrays.md
+    - Types: api/types.md
   - Changelog: changelog.md
 theme:
     name: material
