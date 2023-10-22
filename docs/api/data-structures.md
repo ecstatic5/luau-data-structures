@@ -35,6 +35,7 @@ Some methods will come with the following tags:
 - #### :count(value: any): number - **`instance (:)`**
 - #### :choice(): any - **`instance (:)`**
 - #### :copy(): Array - **`instance (:)`** **`constructor`**
+- #### :sort(): Array - **`instance (:)`** **`constructor`**
 - #### :first(): any - **`instance (:)`**
 - #### :last(): any - **`instance (:)`**
 - #### :remove(toRemove: number | string): any - **`instance (:)`**

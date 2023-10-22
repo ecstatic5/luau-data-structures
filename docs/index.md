@@ -101,6 +101,7 @@ You can visit the full RDS API [clicking here](./api.md). The API contains ALL t
         - `:count(value: any): number`
         - `:choice(): any`
         - `:copy(): Array`
+        - `:sort(): Array`
         - `:first(): any`
         - `:last(): any`
         - `:remove(toRemove: number | string): any`
