@@ -15,7 +15,7 @@ return function()
 		end)
 
 		it("Should contains a property named 'current'", function()
-			expect(arrays.numbers.current).to.be.ok()
+			expect(arrays.numbers:length()).to.be.ok()
 		end)
 	end)
 
@@ -104,7 +104,7 @@ return function()
 		end)
 
 		it("Should return an empty array if the 'fn' parameter doesn't return a value", function()
-			expect(#arrays.numbers:map(function() end).current).to.equal(0)
+			expect(arrays.numbers:map(function() end):length()).to.equal(0)
 		end)
 	end)
 
@@ -148,6 +148,66 @@ return function()
 			expect(numbers:fill(10, 1):every(function(el)
 				return el == numbers[1]
 			end)).to.be.equal(true)
+		end)
+	end)
+
+	--[[
+	TODO:
+	
+	describe(":merge()", function()
+		it()
+	end)
+	describe(":filter()", function()
+		it()
+	end)
+	describe(":slice()", function()
+		it()
+	end)
+	describe(":length()", function()
+		it()
+	end)
+	]]
+
+	describe(":entries()", function()
+		it("Should return the index with the value inside a table", function()
+			local letters = Array.new("a", "b", "c")
+			local entries = letters:entries().current
+
+			expect(entries).to.be.a("table")
+			expect(entries[1][1]).to.be.a("number")
+			expect(entries[1][2]).to.be.ok()
+		end)
+
+		it("Should return an empty array is the array is empty", function()
+			expect(arrays.empty:entries():length()).to.be.equal(0)
+		end)
+	end)
+
+	--[[
+	TODO:
+
+	describe(":at()", function()
+		it()
+	end)
+	describe(":push()", function()
+		it()
+	end)
+	describe(":pop()", function()
+		it()
+	end)
+	describe(":shift()", function()
+		it()
+	end)
+	describe(":unshift()", function()
+		it()
+	end)
+	]]
+
+	describe(":clean()", function()
+		it("Should remove all the elements", function()
+			local lotNumbers = Array.new():fill(100, 1)
+
+			expect(lotNumbers:clean():length()).to.be.equal(0)
 		end)
 	end)
 end
