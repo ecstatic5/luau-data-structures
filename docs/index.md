@@ -93,6 +93,9 @@ You can visit the full RDS API [clicking here](./api.md). The API contains ALL t
         - `:merge<T>(array: Array)`
         - `:filter<T>(fn: (value: T) -> boolean): Array`
         - `:slice(start: number, _end: number): Array`
+        - `:length(): number`
+        - `:entries(): Array`
+        - `:at(pos: number): any`
         - `:forEach<T>(fn: (el: T, index: number?, array: Array?) -> ())`
         - `:push(element): number`
         - `:pop(): number`
