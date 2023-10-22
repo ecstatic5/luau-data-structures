@@ -18,8 +18,6 @@ function Array.new<T>(...: T)
 	return self
 end
 
------------- STATIC METHODS ------------
-
 --[[
 	Creates an instance of the Array class with ALL the elements
 	of the iterable that is passed as argument
@@ -50,10 +48,8 @@ function Array.isEmpty(array)
 	assert(type(array) == "table", "'array' must be an Array")
 	assert(array.current ~= nil, "'array' must be an Array")
 
-	return #array.current <= 0
+	return array:length() <= 0
 end
-
------------- INSTANCE METHODS ------------
 
 --[[
 	Configures the possible options of the current instance
@@ -71,10 +67,10 @@ end
 	@returns A string joined with all Array elements
 ]]
 function Array:join(separator: string)
-	assert(#self.current > 0, "It's not possible to join empty arrays")
+	assert(type(separator) == "string", "'separator' must be a string")
+	assert(self:length() > 0, "It's not possible to join empty arrays")
 
-	separator = separator or ""
-	return table.concat(self.current, separator)
+	return table.concat(self.current, separator or "")
 end
 
 --[[
@@ -104,9 +100,9 @@ function Array:map<T>(fn: (el: T, index: number) -> T)
 	local mappedArray = self.new()
 
 	self:forEach(function(el)
-		local element = fn(el, #mappedArray.current + 1)
+		local element = fn(el, mappedArray:length() + 1)
 		if element then
-			mappedArray:push(element, #mappedArray)
+			mappedArray:push(element)
 		end
 	end)
 
@@ -208,7 +204,7 @@ end
 	@returns Array		Sliced array
 ]]
 function Array:slice(start: number, _end: number?)
-	_end = _end or #self.current
+	_end = _end or self:length()
 
 	assert(type(start) == "number", "'start' paremeter must be a number")
 	assert(type(_end) == "number", "'end' paremeter must be a number")
@@ -238,24 +234,59 @@ function Array:forEach<T>(fn: (el: T, index: number?, array: { T }?) -> ())
 end
 
 --[[
+	Returns the length of the array
+
+	@returns number Array's length
+]]
+function Array:length(): number
+	return #self.current
+end
+
+--[[
+	Returns all the elements of the array along with its index within a table. Example: {1, "first element"}
+
+	@returns Array
+
+]]
+function Array:entries()
+	local array = self.new()
+
+	self:forEach(function(el, index)
+		array:push({ index, el })
+	end)
+
+	return array
+end
+
+--[[
+	Returns the element in certain position
+
+	@pos		number	Element position
+	@returns	any		Element in that position
+]]
+function Array:at(pos: number): any
+	return self.current[pos]
+end
+
+--[[
 	Pushes an element to the last element of the array
 
     @element    any     Element to be pushed
-	@returns    number  New array lenght
+	@returns    number  New array length
 ]]
 function Array:push(element)
 	table.insert(self.current, element)
-	return #self.current
+	return self:length()
 end
 
 --[[
     Removes the last element of the array
 
-    @returns New array lenght
+    @returns New array length
 ]]
 function Array:pop()
-	table.remove(self.current, #self.current)
-	return #self.current
+	table.remove(self.current, self:length())
+	return self:length()
 end
 
 --[[
@@ -272,9 +303,9 @@ end
 --[[
 	Inserts any type of element into the start of the array
 
-	@returns number New lenght of the array
+	@returns number New length of the array
 ]]
-function Array:unshift<T>(...)
+function Array:unshift<T>(...: T)
 	local t = { ... }
 
 	for i = 1, #{ ... }, 1 do
@@ -282,7 +313,7 @@ function Array:unshift<T>(...)
 	end
 
 	table.clear(t)
-	return #self.current
+	return self:length()
 end
 
 --[[
@@ -292,7 +323,7 @@ end
 ]]
 function Array:reverse()
 	local reversed = self.new()
-	for i = #self.current, 1, -1 do
+	for i = self:length(), 1, -1 do
 		reversed:push(self.current[i])
 	end
 	return reversed
