@@ -8,10 +8,11 @@
 
 ## 21/10/2023: **v1.1.1-alpha**
 
-- 5 new methods added to Arrays
+- 3 new methods added to the Arrays (`:at()`, `:entries()`, `:length()`)
 - More tests added to the Arrays
 - Improved TypeChecking in Arrays
 - Useless code removed
+- Array's code refactored
 
 ## 21/10/2023: **v1.0.0-alpha**
 
