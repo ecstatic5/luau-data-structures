@@ -1,80 +1,46 @@
-# Luau-Data-Structures
+![RDS Banner image](./images/rds-banner.png)
 
-## Introduction
+# Introduction
 
-`"luau-data-structures"` is a **ModuleScript** made by and for the [Roblox Studio](https://www.roblox.com/create) community, mainly focused on adding new `data structures` with new powerful methods from other programming languages **(such as Python, JavaScript, and in the future more)**.
+RDS is a ModuleScript that adds new data structures to LUAU with powerful and efficient methods to drive your game to success
 
-> This ModuleScript was made by ecstaticfaiv & iiAngel out of love for the community ♥
+## Code Examples
 
----
-
-## Why to use `luau-data-structures`?
-
-This **ModuleScript** will allow you to have `better data structures` for your game and will allow you to `speed up and facilitate your work with data structure management`.
-
-> Also due to its large number of methods you will not have to do them by hand.
-
----
-
-## Code examples
-
-How to create an Array:
-
+> Filter only even numbers
 ```lua
-local Array = require("<location-to-module>")
+local Array = require("<module-location>")
+local numbers = Array.new(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
-local myArray = Array.new(1, 2, 3, "Hello!")
--- {["current"] = {1, 2, 3, "Hello"}}
-```
-
-### Some helpful methods here (using `myArray` as an example)
-
-`Merge`:
-Inserts a table contents inside the array
-
-```lua
-myArray:merge({"Hey!", 4, 5, 6})
--- {1, 2, 3, "Hello!", "Hey", 4, 5, 6}
-```
-
-`Shift`:
-This removes the first element of the array
-
-```lua
-myArray:shift()
--- Array contents:
--- {2, 3, "Hello!"}
-```
-
-`Unshift`:
-Inserts any value inside the function arguments to the array
-
-```lua
-myArray:unshift(4, 5)
--- Array contents:
--- {4, 5, 1, 2, 3, "Hello!"}
-```
-
-`Map`:
-Returns a modified array with the return value of the callback function
-
-```lua
-local myNumbers = Array.new(2, 4, 6, 8)
-local result
-
-result = myNumbers:map(function(element)
-    return element * 2
+local evenNumbers = numbers:filter(function(el)
+    return el % 2 == 0
 end)
 
--- `result` contents:
--- { 4, 8, 12, 16 }
+print(evenNumbers) -- [2, 4, 6, 8, 10]
 ```
 
-`Fill`:
-Fills the array with an specified amount of values
-
+> Obtain the square of all numbers
 ```lua
-myArray:fill(5, "Hi!")
--- Array contents:
--- { 1, 2, 3, "Hello!", "Hi!", "Hi!", "Hi!", "Hi!", "Hi!"}
+local Array = require("<module-location>")
+local numbers = Array.new(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+local squareNumbers = numbers:map(function(el)
+    return el ^ 2
+end)
+
+print(squareNumbers) -- [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 ```
+
+> Check if all the elements of an array meet a condition
+```lua
+local Array = require("<module-location>")
+local numbers = Array.new(1, 2, 4, 5, 6, 2, 8, 4, 3, 2)
+
+print(numbers:every(function(el)
+    return el > 3
+end)) -- false (not all elements are greater than 3)
+```
+
+---
+
+<h2 align="center"> Made by and for the community, for you, for everyone. </h2>
+<p align="center">Scripted by iiAngel and ecstatic5</p>
