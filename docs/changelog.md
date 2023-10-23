@@ -6,8 +6,19 @@ In this section you will find the changes made to the ModuleScript and the docum
 - [v1.0.0-alpha](#21102023-v100-alpha)
 - [v1.1.1-alpha](#21102023-v111-alpha)
 - [v1.2.2-alpha](#22102023-v122-beta)
+- [v1.3.3-rc.1](#22102023-v133-rc1)
 
 ---
+
+## 22/10/2023: **v1.3.3-rc.1**
+
+- [Dynamic require](./news/v1.3.3-rc-1.md) has been added
+- The `source code` for each data structure has been `split into separate files for each method`
+- Refactored code
+- Better typechecking
+- [News](./news/v1.3.3-rc-1.md) section added to documentation
+- New [types](./api/types.md) added
+- Tests added for each Array method
 
 ## 22/10/2023: **v1.2.2-beta**
 
