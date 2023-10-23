@@ -47,3 +47,5 @@ Some methods will come with the following tags:
 
 ### [Types](./types.md)
 - #### Array.Types.ArrayConfig
+- #### Array.Types.Array
+- #### Array.Types._self
