@@ -3,12 +3,22 @@
 In this section you will find the changes made to the ModuleScript and the documentation
 
 ## Versions table
-- [v1.0.0-alpha](#21102023-v100-alpha)
-- [v1.1.1-alpha](#21102023-v111-alpha)
-- [v1.2.2-alpha](#22102023-v122-beta)
+- [v1.4.3-rc.2](#23102023-v143-rc2) `latest`
 - [v1.3.3-rc.1](#22102023-v133-rc1)
+- [v1.2.2-alpha](#22102023-v122-beta)
+- [v1.1.1-alpha](#21102023-v111-alpha)
+- [v1.0.0-alpha](#21102023-v100-alpha) `oldest`
 
 ---
+
+## 23/10/2023: **v1.4.3-rc.2**
+
+- 2 new methods added to the Arrays (`:flat()`, `:append()`)
+- `:filter()` Now throws an error if the parameter 'fn' is not passed
+- More tests added to the Arrays
+- The [Tutorial](./tutorial/installation.md) section is now complete
+- The version table is now sorted from newest to oldest
+
 
 ## 22/10/2023: **v1.3.3-rc.1**
 

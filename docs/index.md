@@ -110,6 +110,8 @@ You can visit the full RDS API [clicking here](./api.md). The API contains ALL t
         - `unshift<T>(...: T): number`
         - `:reverse()`
         - `:clean()`
+        - `:flat(depth: number): Array`
+        - `:append<T>(...: T): number`
 - **Set**
     - `coming soon`
 - **Dict**

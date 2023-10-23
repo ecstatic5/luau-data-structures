@@ -44,6 +44,8 @@ Some methods will come with the following tags:
 - #### unshift<T>(...: T): number - **`instance (:)`**
 - #### :reverse() - **`instance (:)`**
 - #### :clean() - **`instance (:)`**
+- #### :flat(depth: number): Array - **`instance (:)`** **`constructor`**
+- #### :append<T>(...: T): number **`instance (:)`**
 
 ### [Types](./types.md)
 - #### Array.Types.ArrayConfig
