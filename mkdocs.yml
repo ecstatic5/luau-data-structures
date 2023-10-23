@@ -14,6 +14,8 @@ nav:
     - Array: api/arrays.md
     - Types: api/types.md
   - Changelog: changelog.md
+  - News:
+    - v1.3.3-rc.1: news/v1.3.3-rc-1.md
 theme:
     name: material
     features:
