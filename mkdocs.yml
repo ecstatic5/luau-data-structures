@@ -9,6 +9,8 @@ nav:
   - Tutorial:
     - Installation: tutorial/installation.md
     - Creating a data structure: tutorial/creating-data-structure.md
+    - Key concepts: tutorial/key-concepts.md
+    - Understanding the RDS API: tutorial/understanding-rds-api.md
   - API:
     - Data Structures: api/data-structures.md
     - Array: api/arrays.md
