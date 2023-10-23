@@ -16,7 +16,6 @@ In this section you will find the changes made to the ModuleScript and the docum
 - 2 new methods added to the Arrays (`:flat()`, `:append()`)
 - `:filter()` Now throws an error if the parameter 'fn' is not passed
 - More tests added to the Arrays
-- The [Tutorial](./tutorial/installation.md) section is now complete
 - The version table is now sorted from newest to oldest
 
 
