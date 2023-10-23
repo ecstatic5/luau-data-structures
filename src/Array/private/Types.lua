@@ -38,6 +38,7 @@ export type Array<T> = {
 	shift: (self: _self) -> number,
 	unshift: (self: _self, ...T) -> number,
 	toString: (self: _self) -> string,
+	append: (self: _self, ...T) -> number,
 
 	--[[ @returns Array<T> Array.instance ]]
 	map: (self: _self, fn: (el: T, index: number) -> T) -> Array<T>,
@@ -50,6 +51,7 @@ export type Array<T> = {
 	remove: (self: _self, toRemove: number | string) -> Array<T>,
 	reverse: (self: _self) -> Array<T>,
 	clean: (self: _self) -> Array<T>,
+	flat: (self: _self, depth: number) -> Array<T>,
 }
 
 export type _self = {}

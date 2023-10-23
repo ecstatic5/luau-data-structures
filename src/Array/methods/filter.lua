@@ -5,6 +5,8 @@
 ]]
 
 return function(self, fn: (value: any) -> boolean)
+	assert(type(fn) == "function", "'fn' must be a function")
+
 	local filtered = self.new()
 
 	for _, v in self.current do
