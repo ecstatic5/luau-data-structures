@@ -11,7 +11,7 @@ return function(self, depth: number)
 	for _ = 1, depth do
 		self:forEach(function(el, elIndex)
 			if type(el) == "table" then
-				self:remove(elIndex):append(unpack(el))
+				self:remove(elIndex):append(unpack(el.current or el))
 			end
 		end)
 	end
