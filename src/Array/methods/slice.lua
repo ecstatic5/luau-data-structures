@@ -9,8 +9,8 @@
 return function(self, start: number, _end: number?)
 	_end = _end or self:length()
 
-	assert(type(start) == "number", "'start' paremeter must be a number")
-	assert(type(_end) == "number", "'end' paremeter must be a number")
+	assert(type(start) == "number", "'start' parameter must be a number")
+	assert(type(_end) == "number", "'end' parameter must be a number")
 	assert(_end > start, "'start' parameter can't be greater than '_end'")
 
 	local sliced = self.new()
