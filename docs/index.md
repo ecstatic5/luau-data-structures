@@ -82,7 +82,6 @@ You can visit the full RDS API [clicking here](./api.md). The API contains ALL t
         - `.from<T>(iterable: { T }): Array`
         - `.isArray(array: Array): boolean`
         - `.isEmpty(array: Array): boolean`
-        - `.zip(...: Array): Array`
     - Instance Methods
         - `:config(configuration: Types.ArrayConfig)`
         - `:join(separator: string): string`

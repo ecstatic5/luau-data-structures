@@ -45,7 +45,6 @@ export type Array<T> = {
 	isArray: (array: Array<T>) -> boolean,
 	new: (...T) -> Array<T>,
 	isEmpty: (array: Array<T>) -> boolean,
-	zip: (...T) -> Array<T>,
 
 	--[[ Array.instance ]]
 	config: (self: _self, configuration: ArrayConfig) -> (),

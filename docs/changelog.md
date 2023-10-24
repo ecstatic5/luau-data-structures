@@ -18,7 +18,6 @@ In this section you will find the changes made to the ModuleScript and the docum
 
 ## 24/10/2023: **v1.5.4-rc.3**
 
-- 1 new method added to the Arrays (`.zip()`) `static (.)`
 - `:choice()` can now return more than one element if desired
 - `:flat()` can now flat arrays
 - More tests added to the Arrays (yes, more, i hate this)
