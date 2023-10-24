@@ -16,7 +16,7 @@ return function(self, start: number, _end: number?)
 	local sliced = self.new()
 
 	for i = start, _end do
-		sliced:push(self.current[i])
+		sliced:push(self:at(i))
 	end
 
 	return sliced
