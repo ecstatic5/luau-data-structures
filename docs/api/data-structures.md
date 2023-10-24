@@ -17,6 +17,7 @@ Some methods will come with the following tags:
 - #### .from<T\>(iterable: { T }): Array - **`static (.)`** **`constructor`**
 - #### .isArray(array: Array): boolean - **`static (.)`**
 - #### .isEmpty(array: Array): boolean - **`static (.)`**
+- #### .zip(...: Array): Array - **`static (.)`** **`constructor`**
 - #### :config(configuration: Types.ArrayConfig) - **`instance (:)`**
 - #### :join(separator: string): string - **`instance (:)`**
 - #### :includes(value: any): boolean - **`instance (:)`**

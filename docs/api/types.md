@@ -30,7 +30,7 @@ _Represents an Array._
 
 ```lua linenums="1"
 export type Array<T> = {
-		--[[
+	--[[
 		- Array.properties: Properties of the array
 		- Array.static: Static methods of the Array class
 		- Array.instance: Instance methods of the Array class
@@ -45,6 +45,7 @@ export type Array<T> = {
 	isArray: (array: Array<T>) -> boolean,
 	new: (...T) -> Array<T>,
 	isEmpty: (array: Array<T>) -> boolean,
+	zip: (...T) -> Array<T>,
 
 	--[[ Array.instance ]]
 	config: (self: _self, configuration: ArrayConfig) -> (),
@@ -58,7 +59,6 @@ export type Array<T> = {
 	at: (self: _self, pos: number) -> T,
 	push: (self: _self, element: T) -> number,
 	count: (self: _self, value: T) -> number,
-	choice: (self: _self) -> T,
 	first: (self: _self) -> T,
 	last: (self: _self) -> T,
 	pop: (self: _self) -> number,
@@ -68,6 +68,7 @@ export type Array<T> = {
 	append: (self: _self, ...T) -> number,
 
 	--[[ @returns Array<T> Array.instance ]]
+	choice: (self: _self, amount: number?) -> T | Array<T>,
 	map: (self: _self, fn: (el: T, index: number) -> T) -> Array<T>,
 	fill: (self: _self, amount: number, value: T) -> Array<T>,
 	filter: (self: _self, fn: (value: T) -> boolean) -> Array<T>,
