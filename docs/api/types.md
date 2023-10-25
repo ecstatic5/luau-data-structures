@@ -65,6 +65,7 @@ export type Array<T> = {
 	unshift: (self: _self, ...T) -> number,
 	toString: (self: _self) -> string,
 	append: (self: _self, ...T) -> number,
+	indexOf: (self: _self, el: T) -> number,
 
 	--[[ @returns Array<T> Array.instance ]]
 	choice: (self: _self, amount: number?) -> T | Array<T>,

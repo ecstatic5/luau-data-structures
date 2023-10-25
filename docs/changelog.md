@@ -3,7 +3,8 @@
 In this section you will find the changes made to the ModuleScript and the documentation
 
 ## Versions table
-- [v1.5.4-rc.3](#24102023-v154-rc3) `latest`
+- [v1.6.4-rc.4](#25102023-v164-rc4) `latest`
+- [v1.5.4-rc.3](#24102023-v154-rc3)
 - [v1.4.3-rc.2](#23102023-v143-rc2)
 - [v1.3.3-rc.1](#22102023-v133-rc1)
 - [v1.2.2-alpha](#22102023-v122-beta)
@@ -15,6 +16,10 @@ In this section you will find the changes made to the ModuleScript and the docum
 ## ??/??/2023: **v?.?.?**
 
 - coming soon 🔥
+
+## 25/10/2023: **v1.6.4-rc.4**
+
+- 1 new method added to the Arrays (`:indexOf()`)
 
 ## 24/10/2023: **v1.5.4-rc.3**
 

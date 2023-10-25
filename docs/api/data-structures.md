@@ -46,6 +46,7 @@ Some methods will come with the following tags:
 - #### :clean() - **`instance (:)`**
 - #### :flat(depth: number): Array - **`instance (:)`** **`constructor`**
 - #### :append<T>(...: T): number **`instance (:)`**
+- #### :indexOf<T>(el: T): number **`instance (:)`**
 
 ### [Types](./types.md)
 - #### Array.Types.ArrayConfig
