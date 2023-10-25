@@ -4,9 +4,6 @@
 	@returns	any | Array		Random element(s)
 ]]
 
---[[
-	TODO: Crear función .zip(...)
-]]
 return function(self, amount)
 	local length = self:length()
 	amount = amount or 0
